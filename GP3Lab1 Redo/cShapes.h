@@ -23,16 +23,13 @@ public:
 	void setRotAngle(float rotAngle);
 	void prepare(float rAngle);
 	virtual void initialise() = 0;
-	void rotate(float angle);
-	void translate(glm::vec3 &translation);
 
 	PFNGLGENBUFFERSARBPROC glGenBuffers = NULL;
 	PFNGLBINDBUFFERPROC glBindBuffer = NULL;
 	PFNGLBUFFERDATAPROC glBufferData = NULL;
 
-protected:
+private:
 	float m_rotAngle;
-	glm::vec3 m_translation;
 
 };
 

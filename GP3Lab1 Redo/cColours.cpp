@@ -25,5 +25,5 @@ void cColours::setColourList()
 	m_ColourList[4] = glm::vec3(1.0f, 0.0f, 1.0f); //Purple
 	m_ColourList[5] = glm::vec3(1.0f, 1.0f, 1.0f); //White
 	m_ColourList[6] = glm::vec3(0.5f, 0.5f, 0.5f); //Grey
-	m_ColourList[7] = glm::vec3(2.0f, 0.5f, 0.0f); //Orange
+	m_ColourList[7] = glm::vec3(1.0f, 0.5f, 0.0f); //Orange
 }

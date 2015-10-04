@@ -10,12 +10,11 @@ cShapes.cpp
 cShapes::cShapes()
 {
 	m_rotAngle = 0.0f;
-	m_translation = glm::vec3(0.0f, 0.0f, 0.0f);
 }
 
 void cShapes::render(float rotAngle)
 {
-	//glRotatef(rotAngle, 0.0f, 1.0f, 0.0f); 
+	glRotatef(rotAngle, 0.0f, 1.0f, 0.0f); 
 	glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
 }
 
@@ -27,10 +26,6 @@ float cShapes::getRotAngle()
 void cShapes::setRotAngle(float rotAngle)
 {
 	m_rotAngle = rotAngle;
-}
-
-void cShapes::translate(glm::vec3 &translation){
-	m_translation += translation;
 }
 
 void cShapes::prepare(float rAngle)

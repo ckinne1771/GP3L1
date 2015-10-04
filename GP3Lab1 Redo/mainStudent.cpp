@@ -39,7 +39,9 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	cCube myCube;
 
 	// Pyramid
+
 	cPyramid myPyramid;
+	//cPyramid myPyramid;
 
     //Attempt to create the window
 	if (!pgmWNDMgr->createWND(windowWidth, windowHeight, windowBPP))
@@ -60,6 +62,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 	// Initialise an instance of the cube class
 	myCube.initialise();
+	myPyramid.initialise();
+
     //This is the mainloop, we render frames until isRunning returns false
 	while (pgmWNDMgr->isWNDRunning())
     {
@@ -74,8 +78,9 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		myCube.prepare(0.0f);
 		myPyramid.prepare(0.0f);
 		// Call the render method of the cube; //Render the scene
-		myCube.render(0.0f);
-		myPyramid.render(0.0f);
+		myCube.render(30.0f);
+		myPyramid.render(30.0f);
+
 		pgmWNDMgr->swapBuffers();
     }
 

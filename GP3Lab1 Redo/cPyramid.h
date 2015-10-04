@@ -1,11 +1,11 @@
 /*
 ==========================================================================
-cCube.h
+cPyramid.h
 ==========================================================================
 */
 
-#ifndef _CUBE_H
-#define _CUBE_H
+#ifndef _PYRAMID_H
+#define _PYRAMID_H
 
 #include "windowOGL.h"
 #include "glm\glm.hpp"
@@ -15,29 +15,26 @@ cCube.h
 #include "cColours.h"
 #include "cShapes.h"
 
-class cCube : public cShapes
+class cPyramid : public cShapes
 {
 public:
-	cCube();
+	cPyramid();
 	virtual void render(float rotAngle);
 	virtual void initialise();
 
 private:
 
-	glm::vec3 m_topLeftFront;
+	glm::vec3 m_top;
 	glm::vec3 m_bottomLeftFront;
-	glm::vec3 m_topRightFront;
 	glm::vec3 m_bottomRightFront;
-	glm::vec3 m_topLeftBack;
-	glm::vec3 m_topRightBack;
 	glm::vec3 m_bottomLeftBack;
 	glm::vec3 m_bottomRightBack;
 
-	glm::vec3 m_Faces[24];
-	GLuint m_Indices[36];
+
+	GLuint m_Indices[18];
 
 	std::vector<glm::vec3> m_vertices;
-	glm::vec3 m_colourList[24];
+	glm::vec3 m_colourList[16];
 	GLuint m_VertexBufferObjects[3];
 };
 

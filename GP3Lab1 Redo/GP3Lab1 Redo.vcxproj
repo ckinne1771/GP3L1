@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0F467C22-2533-48A6-9B45-AB6FF440D72A}</ProjectGuid>
-    <RootNamespace>GP3Lab1</RootNamespace>
+    <ProjectGuid>{70BFEC1F-8809-48E5-8A31-383F981EC3E5}</ProjectGuid>
+    <RootNamespace>GP3Lab1Redo</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -64,9 +64,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Library Include="..\..\..\Desktop\Libraries\Libraries\freeglut.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="cColours.cpp" />
     <ClCompile Include="cCube.cpp" />
     <ClCompile Include="cPyramid.cpp" />
@@ -79,12 +76,15 @@
   <ItemGroup>
     <ClInclude Include="cColours.h" />
     <ClInclude Include="cCube.h" />
+    <ClInclude Include="cPyramid.h" />
     <ClInclude Include="cShapes.h" />
     <ClInclude Include="cWNDManager.h" />
     <ClInclude Include="GameConstants.h" />
-    <ClInclude Include="cPyramid.h" />
     <ClInclude Include="wglext.h" />
     <ClInclude Include="windowOGL.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\Desktop\Libraries\Libraries\freeglut.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

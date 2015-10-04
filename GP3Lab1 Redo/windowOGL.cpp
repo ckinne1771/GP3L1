@@ -14,6 +14,9 @@ bool windowOGL::initOGL()
 	glDepthFunc(GL_LEQUAL);
 	onResize(1024, 768);
 
+	glEnableClientState(GL_COLOR_ARRAY);
+	glEnableClientState(GL_VERTEX_ARRAY);
+
     //Return success
     return true;
 }
